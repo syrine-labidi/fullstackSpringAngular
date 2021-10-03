@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" th:href="@{/css/main.css}">
+
+</head>
+<body >
+<h1 align="center">Mise à jour d'un étudiant</h1>
+	<!-- pour acceder à la page avec action et la poster avec method  -->
+
+	<form action="../update" method="POST" th:object="${etudiant}" >
+		<div class="container" >
+			
+			<div class="row">
+				<div class="form-group" >
+					<input type="hidden" name="id" th:field ="*{id}" class="form-control" />
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="form-group">
+					<label>NOM</label><input type="text" name="nom" th:field ="*{nom}" class="form-control" /></br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<label>EMAIL</label><input type="text" name="email" th:field ="*{email}" class="form-control" /></br>
+				</div>
+			</div>
+			<div class="row">
+				<input class="btn btn-success" type="submit" value="Update" />
+			</div>
+		</div>
+	</form>
+
+</body>
+</html>

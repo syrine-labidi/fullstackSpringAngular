@@ -31,8 +31,8 @@
 				<td th:text="${etudiant.id}" align="center"></td>
 				<td th:text="${etudiant.nom}" align="center"></td>
 				<td th:text="${etudiant.email}" align="center"></td>
-				<td align="center"><a href="#" class="btn btn-warning">Modifier</a>
-				<td align="center"><a href="#" class="btn btn-danger">Supprimer</a>
+				<td align="center"><a th:href="@{/etudiant/update/{ide}(ide=${etudiant.id})}" class="btn btn-warning">Modifier</a>
+				<td align="center"><a th:href="@{/etudiant/delete/{ide}(ide=${etudiant.id})}" class="btn btn-danger">Supprimer</a>
 			</tr>
 		</tbody>
 	</table>

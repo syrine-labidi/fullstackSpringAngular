@@ -13,7 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.sip.ams.entities.Etudiant;
 
-//invoquer 
+//invoquer rquest apres path ! c plus specifique
+@RequestMapping("/etudiant")
 @Controller
 public class EtudiantController {
 	ArrayList<Etudiant> etudiants = new ArrayList<>();
@@ -105,4 +106,6 @@ public class EtudiantController {
 		return "redirect:students"; //redirect vers path
 		
 	}
+	
+	
 }

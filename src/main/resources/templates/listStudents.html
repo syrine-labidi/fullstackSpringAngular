@@ -1,26 +1,40 @@
 <html>
-<head> 
-<meta charset="UTF-8"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
- </head>
+
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+
+
 <body>
-<h1 align="center"> liste des étudiants </h1>
-<table class="table table-striped" align = center border="1">
-  	<thead class="thead-dark">
- 		<tr>
- 			<th>Identifiant</th> <th>Nom</th> <th>Email</th> 
- 		</tr> 	
-  	</thead>
-  	<tbody>
-  	<!-- etudiant c'est indice de parcours -->
-  		<tr th:each="etudiant:${students}">
-  			<td th:text="${etudiant.id}"></td> 
-  			<td th:text="${etudiant.nom}"></td>  
-  			<td th:text="${etudiant.email}"></td>
-  			
-  		</tr>
-  	</tbody>
-  </table>
+	<h1 align="center">liste des étudiants</h1>
+	<h3>
+		Pour ajouter un étudiant cliquer <a th:href="@{/etudiant/add}">ici</a>
+	</h3>
+
+	<table class="table table-striped" align=center border="1">
+		<thead class="thead-dark">
+			<tr>
+				<th align="center">Identifiant</th>
+				<th align="center">Nom</th>
+				<th align="center">Email</th>
+				<th align="center">Modifier</th>
+				<th align="center">Supprimer</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- etudiant c'est indice de parcours -->
+			<tr th:each="etudiant:${students}">
+				<td th:text="${etudiant.id}" align="center"></td>
+				<td th:text="${etudiant.nom}" align="center"></td>
+				<td th:text="${etudiant.email}" align="center"></td>
+				<td align="center"><a href="#" class="btn btn-warning">Modifier</a>
+				<td align="center"><a href="#" class="btn btn-danger">Supprimer</a>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>

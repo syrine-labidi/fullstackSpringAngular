@@ -1,22 +1,37 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" th:href="@{/css/main.css}">
+
 </head>
-<body>
+<body >
 	<h1 align="center">Ajouter nouvel étudiant</h1>
-<!-- pour acceder à la page avec action et la poster avec method  -->	
-	<form action="add" method="POST">
-		<div class="form-group">
-		<label>ID</label><input type="number" name="id" class="form-control" /> </br>
+	<!-- pour acceder à la page avec action et la poster avec method  -->
+
+	<form action="add" method="POST" >
+		<div class="container" >
+			<div class="row">
+				<div class="form-group" >
+					<label >ID</label><input type="number" name="id" class="form-control" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<label>NOM</label><input type="text" name="nom" class="form-control" /></br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<label>EMAIL</label><input type="text" name="email" class="form-control" /></br>
+				</div>
+			</div>
+			<div class="row">
+				<input class="btn btn-success" type="submit" value="Ajouter" />
+			</div>
 		</div>
-		<div class="form-group">
-		<label>NOM</label><input type="text" name="nom" class="form-control" /></br>
-		</div>
-		<div class="form-group">
-		<label>EMAIL</label><input type="text" name="email" class="form-control" /></br>
-		</div>	
-		<input class="btn btn-success" type="submit" value="Ajouter"  />
 	</form>
+
 </body>
 </html>
